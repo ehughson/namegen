@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet"> 
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Sacramento&display=swap" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Sacramento&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+   background-image: url({{url_for('static', filename = 'MyPride_night sky -FLAT.png')}});
+   background-position: center;
+}
+textarea {
+  border-radius: 25px;
+  background: #FFF1F1;
+  padding: 20px; 
+  width: 500px;
+  height: 150px;  
+}
+.image{
+	margin-top: 20px;
+    margin-bottom: -100px;
+	color: #fff;
+	font-size: 50px;
+	text-align: center;
+}
+
+.welcome{
+	margin-top: 2px;
+    margin-bottom: -10px;
+	color: #fff;
+	font-size: 50px;
+	text-align: center;
+}
+h1 
+{
+	font-family: 'Sacramento', cursive;
+	font-weight: normal;
+	color: white;
+}
+h2 
+{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	color: white;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
+
+	</style>
+
+</head>
+<body>
+	<div class="image">
+	<center><img src="static/MyPrideFinalLogoWithTitle.png" alt="Simply Easy Learning" width="275"
+         height="275"></center>
+     </div>
+	<div class = "welcome">
+		<h1>
+			Your Hunt Chief given name is...
+		</h1>
+	</div>
+	<div class="ml-container">
+
+			<form action="/home" method="POST">
+			
+			<center><input type="submit" class=".button" value="submit"></center>
+			
+		</form>
+	</div>
+	<div class="ml-container">
+		<center><form role="form" method='POST' action='/home'>
+				<div>
+		    	<br>
+		    	<h2> {{pre_name}} {{ suf_name}} </h2>
+		    	<br>
+		    	</div>
+		    	 <div><center>
+			    <h2> {{ p_desc }} </h2>
+			    <h2> {{ s_desc }} </h2>
+			    </center></div>
+		  </form></center> 
+		
+    </div>
+
+   
+
+
+
+   
+
+</body>
+</html>

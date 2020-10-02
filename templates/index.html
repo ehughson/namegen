@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet"> 
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Sacramento&display=swap" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Sacramento&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+
+html { 
+   background: url('static/dfgdfgdfhre.png') no-repeat center fixed;
+   background-size: cover;
+
+}
+
+
+.image1{
+  position: relative;
+  text-align: right;
+  margin-top: 200px;
+}
+.image2{
+  position: relative;
+  text-align: left;
+  margin-top: -100px;
+  margin-bottom: -100px;
+  margin-left: 100px;
+  top: 50%;
+}
+
+.menu {
+  position: relative;
+  text-align: right;
+  margin-top: 100px;
+  margin-bottom: -50px;
+  margin-right: 100px;
+  top: 50%;
+}
+
+.menu2 {
+  position: relative;
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: -100px;
+  margin-right: 100px;
+  top: 50%;
+}
+
+.container {
+    position: relative;
+    font-family: Arial;
+    text-align: right;
+}
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+ .imageContainer {
+       width:200px; 
+       height:200px; 
+       background-image: url("static/124234534645.png");
+ }
+
+ .image { 
+   position: relative;
+   text-align: right;
+  	margin-top: 200px;/* for IE 6 */
+}
+
+h2 { 
+   position: absolute; 
+   top: 200px; 
+   width: 100%;
+   text-align: right;
+   margin-top: -100px;
+}
+
+
+</style>
+
+</head>
+<body>
+
+	<div class = 'menu'>
+		
+		<a href="{{ url_for('home')}}" class = "w3-button w3-black">Name Generator</a>
+		<a href="https://twitter.com/myprideseries" class = "w3-button w3-black">Twitter</a>
+		<a href="https://www.youtube.com/watch?v=MpiLfcHTGNg&list=PLfFT2Nsja8lhJgR82e3vgSkpW14D7iarW&ab_channel=tribbleofdoom" class = "w3-button w3-black">YouTube</a>        
+	</div>
+	<!--
+	<div class = 'image2'>
+		<img src="static/hover1.png" alt="Simply Easy Learning" style="max-width:20%;height:auto;">
+    </div>
+         <br>
+    
+     <div class="image1">
+		  <img src="static/124234534645.png" alt="Simply Easy Learning" style="max-width:auto;height:auto;">
+	</div>
+	 -->
+
+	<div class="image">
+
+      <img src="static/124234534645.png" alt="" />
+
+      <h2>Text you want to display over the image</h2>
+
+ </div>
+	<!--
+    <div class = 'image1'>
+		<img src="static/124234534645.png" alt="Simply Easy Learning" style="max-width:auto;height:auto;" >
+    </div>
+	-->
+     <div class = 'menu2'>
+         <a href="https://www.youtube.com/watch?v=MpiLfcHTGNg&list=PLfFT2Nsja8lhJgR82e3vgSkpW14D7iarW&ab_channel=tribbleofdoom" ><img alt="Qries" src='static/youtube_icon.png' style="float: right; max-width:8%;height:auto;"></a>
+         <a href="https://www.youtube.com/watch?v=MpiLfcHTGNg&list=PLfFT2Nsja8lhJgR82e3vgSkpW14D7iarW&ab_channel=tribbleofdoom" ><img alt="Qries" src='static/twitter icon.png' style="float: right;max-width:8%;height:auto;"></a>
+         <a href="https://www.youtube.com/watch?v=MpiLfcHTGNg&list=PLfFT2Nsja8lhJgR82e3vgSkpW14D7iarW&ab_channel=tribbleofdoom" ><img alt="Qries" src='static/facebook icon.png' style="float: right;max-width:8%;height:auto;"></a> 	
+     </div>
+
+
+		
+	
+
+
+
+</body>
+</html>
