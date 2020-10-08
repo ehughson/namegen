@@ -4,7 +4,7 @@
 	<title>Home</title>
 	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-	<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Sacramento&display=swap" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Sacramento&display=swap" rel="stylesheet">
 
@@ -17,9 +17,9 @@ body {
 textarea {
   border-radius: 25px;
   background: #FFF1F1;
-  padding: 20px; 
+  padding: 20px;
   width: 500px;
-  height: 150px;  
+  height: 150px;
 }
 .image{
 	margin-top: 20px;
@@ -31,44 +31,67 @@ textarea {
 
 .welcome{
 	margin-top: 2px;
-    margin-bottom: -10px;
+    margin-bottom: -25px;
 	color: #fff;
 	font-size: 50px;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 	text-align: center;
 }
-h1 
+h1
 {
 	font-family: 'Sacramento', cursive;
 	font-weight: normal;
 	color: white;
 }
-h2 
+h2
 {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: normal;
 	color: white;
 }
+
+.footer-names {
+	color: orange;
+	font-size: 10px;
+	margin: 0;
+}
+
+
 .button {
-  background-color: #4CAF50;
+  background-color: #ffde5f;
   border: none;
-  color: white;
+  border-radius: 12px;
+  color: black;
   padding: 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 2px 2px;
 }
+.button:hover {
+    background-color: #d6c54f
+    }
+
+.button:active {
+    background-color: #d6c54f
+     box-shadow: 0 5px #666;
+  transform: translateY(4px);
+    }
 .content {
   max-width: 500px;
   margin: auto;
 }
+p {
+	margin-top: -10px;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
 
 
 	</style>
 
 </head>
 <body>
+	<div>
 	<div class="image">
 	<center><img src="static/MyPrideFinalLogoWithTitle.png" alt="Simply Easy Learning" width="275"
          height="275"></center>
@@ -81,31 +104,44 @@ h2
 	<div class="ml-container">
 
 			<form action="/home" method="POST">
-			
-			<center><input type="submit" class=".button" value="submit"></center>
-			
+
+			<center><input type="submit" class="button" value="Claim My Name" ></center>
+
 		</form>
 	</div>
 	<div class="ml-container">
 		<center><form role="form" method='POST' action='/home'>
 				<div>
 		    	<br>
-		    	<h2> {{pre_name}} {{ suf_name}} </h2>
+				<h2> {{pre_name}} {{ suf_name}} </h2>
 		    	<br>
 		    	</div>
 		    	 <div><center>
 			    <h2> {{ p_desc }} </h2>
-			    <h2> {{ s_desc }} </h2>
+				<h2> {{ s_desc }} </h2>
+				{% if rare_suf != null %}
+				<h2>{{rare_suf}}</h2>
+				{% endif %}
+				{% if rare_pre != null %}
+				<h2>{{rare_pre}}</h2>
+				{% endif %}
+
 			    </center></div>
-		  </form></center> 
-		
-    </div>
+		  </form></center>
 
-   
+	</div>
+	<footer>
+		<center class = "footer-names">
+			<p margin: -10; >Website Created by: </p>
+			<p margin: 0;>Emma Hughson <a href="https://www.instagram.com/emma_hugh/"style="color:orange;">@emma_hugh</a> </p>
+			<p margin: 0;>Sierra St John <a href="https://www.instagram.com/afan.foryou/"style="color:orange;">@afan_foryou</a></p>
+			<p margin: 10;>Special Thanks to Silver </p>
+
+		</center>
+	</footer>
+</div>
 
 
-
-   
 
 </body>
 </html>
