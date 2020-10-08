@@ -1,3 +1,4 @@
+- The live version is located at : www.mypridenamingceremony.com
 - This name generator was created for the My Pride the Series located at: https://www.youtube.com/channel/UCz0mnXPHa-luJf9-amkTjkw
 - The FLASK APP is in the views.py. 
 - All assets are contained in the static folder. This contains txt files of the names and the images. 
