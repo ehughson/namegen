@@ -2,3 +2,5 @@
 - The FLASK APP is in the views.py. 
 - All assets are contained in the static folder. This contains txt files of the names and the images. 
 - The html is located in the template folder. 
+- TO DO: 
+  - Add a return home button that will take you to main WIX page.
