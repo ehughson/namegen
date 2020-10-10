@@ -5,3 +5,4 @@
 - The html is located in the template folder. 
 - TO DO: 
   - Add a return home button that will take you to main WIX page.
+  - fix rarity script 
