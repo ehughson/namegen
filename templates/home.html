@@ -7,12 +7,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Sacramento&display=swap" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Sacramento&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="../static/MP_Logo_NoText.ico" type="image/x-icon">
 
 <style>
 
 body {
    background-image: url({{url_for('static', filename = 'MyPride_night sky -FLAT.png')}});
    background-position: center;
+   background-attachment:fixed;
 }
 textarea {
   border-radius: 25px;
@@ -22,11 +24,9 @@ textarea {
   height: 150px;
 }
 .image{
-	margin-top: 20px;
+	margin-top: 10px;
     margin-bottom: -100px;
 	color: #fff;
-	font-size: 50px;
-	text-align: center;
 }
 
 .welcome{
@@ -84,7 +84,50 @@ h2
 }
 p {
 	margin-top: -10px;
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+
+}
+ul {
+	list-style-type: none;
+	color: orange;
+}
+li {
+	display: inline;
+	margin: 10px;
+	color: orange;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+#button-2 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-2 a {
+  position: relative;
+  transition: all .35s ease-Out;
+}
+
+#slide {
+  width: 100%;
+  height: 100%;
+  left: -200px;
+  background: #BFC0C0;
+  position: absolute;
+  transition: all .35s ease-Out;
+  bottom: 0;
+}
+
+#button-2:hover #slide {
+  left: 0;
+}
+
+#button-2:hover a {
+  color: #2D3142;
+}
+
+
+
 
 
 	</style>
@@ -93,9 +136,10 @@ p {
 <body>
 	<div>
 	<div class="image">
-	<center><img src="static/MyPrideFinalLogoWithTitle.png" alt="Simply Easy Learning" width="275"
-         height="275"></center>
+	<center><a href="https://www.mypridetheseries.com"><img src="static/MyPrideFinalLogoWithTitle.png" alt="Simply Easy Learning" width="275"
+         height="275"></a></center>
      </div>
+
 	<div class = "welcome">
 		<h1>
 			Your Hunt Chief given name is...
@@ -119,13 +163,6 @@ p {
 		    	 <div><center>
 			    <h2> {{ p_desc }} </h2>
 				<h2> {{ s_desc }} </h2>
-				{% if rare_suf != null %}
-				<h2>{{rare_suf}}</h2>
-				{% endif %}
-				{% if rare_pre != null %}
-				<h2>{{rare_pre}}</h2>
-				{% endif %}
-
 			    </center></div>
 		  </form></center>
 
@@ -135,7 +172,14 @@ p {
 			<p margin: -10; >Website Created by: </p>
 			<p margin: 0;>Emma Hughson <a href="https://www.instagram.com/emma_hugh/"style="color:orange;">@emma_hugh</a> </p>
 			<p margin: 0;>Sierra St John <a href="https://www.instagram.com/afan.foryou/"style="color:orange;">@afan_foryou</a></p>
+			</br>
+			<ul>
+				<li><a href="https://www.canva.com/design/DAEJj_AMefw/S3dydcMUWF9VlUZrnLx5OQ/view?website#2"style="color:orange;">Accessibility</a></li>
+				<li><a href="https://www.canva.com/design/DAEKHmcUqRs/2JA5T8xWYwJb10q4snvQMw/view"style="color:orange;">Privacy Policy</a></li>
+				<li><a href="https://www.canva.com/design/DAEKIMt1pFo/_S_2QwfXfg_O7DFZ58rTbg/view#1"style="color:orange;">Terms and Conditions</a></li>
+			</ul>
 			<p margin: 10;>Special Thanks to Silver </p>
+			<p margin: 10;>My Pride Season 1 inc. 2020 &#169;</p>
 
 		</center>
 	</footer>
